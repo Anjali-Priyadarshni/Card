@@ -1,25 +1,25 @@
 import logo from './logo.svg';
 import './App.css';
+import {ImgData} from './Cards/FetchimgData';
+import { BrowserRouter } from 'react-router-dom';
+import { Routes,Route } from 'react-router-dom';
+import { Card } from './Cards/card';
+import Star from './Cards/Star';
 
 function App() {
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div >
+      <BrowserRouter>
+          <Routes>
+            
+              <Route path='/img' Component={ImgData}></Route>
+              <Route path='/star' Component={Star}></Route> 
+           </Routes>
+      </BrowserRouter>
     </div>
   );
 }
+
 
 export default App;
